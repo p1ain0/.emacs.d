@@ -31,22 +31,10 @@
   ;; Font settings 
   (if *is-windows* 
     (progn 
-      (set-face-attribute 'default nil :font "Microsoft Yahei Mono 9") 
+      (set-face-attribute 'default nil :font "CaskaydiaCove Nerd Font Mono") 
       (dolist (charset '(kana han symbol cjk-misc bopomofo)) 
-        (set-fontset-font (frame-parameter nil 'font) charset (font-spec :family "Microsoft Yahei Mono" :size 12)))) 
-  (set-face-attribute 'default nil :font "Source Code Pro for Powerline 11")))
-
-;;windows change fonts
-(use-package emacs 
-  :if (display-graphic-p) 
-  :config 
-  ;; Font settings 
-  (if *is-windows* 
-    (progn 
-      (set-face-attribute 'default nil :font "Microsoft Yahei Mono 9") 
-      (dolist (charset '(kana han symbol cjk-misc bopomofo)) 
-        (set-fontset-font (frame-parameter nil 'font) charset (font-spec :family "Microsoft Yahei Mono" :size 12)))) 
-  (set-face-attribute 'default nil :font "Source Code Pro for Powerline 11")))
+        (set-fontset-font (frame-parameter nil 'font) charset (font-spec :family "CaskaydiaCove Nerd Font Mono" :size 12)))) 
+  (set-face-attribute 'default nil :font "CaskaydiaCove Nerd Font Mono")))
 
 ;;块移动
 (use-package drag-stuff 
@@ -132,6 +120,11 @@
       (counsel-find-file . ivy-posframe-display-at-frame-center)
       (ivy-switch-buffer . ivy-posframe-display-at-frame-center)
       (t . ivy-posframe-display-at-frame-center)))
-)
+  )
+
+(use-package eshell
+  )
+
+
 (provide 'init-package)
 ;;;

@@ -1,10 +1,13 @@
 (require 'package)
 (setq package-check-signature nil
       load-prefer-newer t)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+(add-to-list 'package-archives '(("gnu" . "https://elpa.gnu.org/packages")
+				 ("melpa" . "https://melpa.org/packages/"))
+				 
+)
 
 ;;; initialize the packages, avoiding a re-initialization
-(unless (bound-and-true-p package--initialized) ;; To avoid warnings on 27
+(unless (bound-and-true-p package-initialized) ;; To avoid warnings on 27
   (package-initialize))
 
 (unless package-archive-contents

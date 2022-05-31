@@ -37,7 +37,7 @@
 ;		  (cabins/setup-font))))
 ;  (add-hook 'after-init-hook #'cabins/setup-font))
 
-(set-face-attribute 'default nil :height 200)
+(set-face-attribute 'default nil :height 120)
 
 
 (provide 'init-ui)
